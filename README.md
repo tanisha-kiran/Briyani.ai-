@@ -165,7 +165,7 @@ After initial dependencies and model files are installed, lesson planning, text-
 
 ## Repository hygiene
 
-Do not commit local model weights, virtual environments, generated lessons, log files, caches or `node_modules`. The included `.gitignore` excludes these artifacts.
+Do not commit local model weights, virtual environments, generated lessons, log files, caches or `node_modules`. The included `.gitignore` excludes these artifacts,thank you.
 
 ## License and model notices
 
