@@ -1,0 +1,539 @@
+{
+  "$defs": {
+    "CodeTraceStep": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "maxLength": 50,
+          "title": "Label",
+          "type": "string"
+        },
+        "value": {
+          "maxLength": 80,
+          "title": "Value",
+          "type": "string"
+        },
+        "output": {
+          "maxLength": 200,
+          "title": "Output",
+          "type": "string"
+        },
+        "line": {
+          "maximum": 12,
+          "minimum": 1,
+          "title": "Line",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "label",
+        "value",
+        "output",
+        "line"
+      ],
+      "title": "CodeTraceStep",
+      "type": "object"
+    },
+    "ComparisonRow": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "maxLength": 45,
+          "title": "Label",
+          "type": "string"
+        },
+        "left": {
+          "maxLength": 110,
+          "title": "Left",
+          "type": "string"
+        },
+        "right": {
+          "maxLength": 110,
+          "title": "Right",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "left",
+        "right"
+      ],
+      "title": "ComparisonRow",
+      "type": "object"
+    },
+    "DataPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "maxLength": 40,
+          "title": "Label",
+          "type": "string"
+        },
+        "value": {
+          "maximum": 100000,
+          "minimum": -100000,
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "label",
+        "value"
+      ],
+      "title": "DataPoint",
+      "type": "object"
+    },
+    "DiagramEdge": {
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "target": {
+          "title": "Target",
+          "type": "string"
+        },
+        "label": {
+          "default": "",
+          "maxLength": 60,
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source",
+        "target"
+      ],
+      "title": "DiagramEdge",
+      "type": "object"
+    },
+    "DiagramNode": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 32,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 90,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label"
+      ],
+      "title": "DiagramNode",
+      "type": "object"
+    },
+    "LearningObjective": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 240,
+          "minLength": 3,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "LearningObjective",
+      "type": "object"
+    },
+    "QuizOption": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 40,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 180,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "QuizOption",
+      "type": "object"
+    },
+    "QuizQuestion": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "lessonId": {
+          "default": "",
+          "title": "Lessonid",
+          "type": "string"
+        },
+        "sceneId": {
+          "title": "Sceneid",
+          "type": "string"
+        },
+        "language": {
+          "default": "en",
+          "title": "Language",
+          "type": "string"
+        },
+        "question": {
+          "maxLength": 260,
+          "minLength": 5,
+          "title": "Question",
+          "type": "string"
+        },
+        "options": {
+          "items": {
+            "$ref": "#/$defs/QuizOption"
+          },
+          "maxItems": 4,
+          "minItems": 3,
+          "title": "Options",
+          "type": "array"
+        },
+        "correctOptionId": {
+          "title": "Correctoptionid",
+          "type": "string"
+        },
+        "explanation": {
+          "maxLength": 500,
+          "minLength": 10,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "misconceptionTag": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Misconceptiontag"
+        }
+      },
+      "required": [
+        "id",
+        "sceneId",
+        "question",
+        "options",
+        "correctOptionId",
+        "explanation"
+      ],
+      "title": "QuizQuestion",
+      "type": "object"
+    },
+    "Scene": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 50,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "title_card",
+            "labeled_diagram",
+            "code_walkthrough",
+            "flow_diagram",
+            "graph_animation",
+            "timeline",
+            "comparison",
+            "animated_illustration"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "heading": {
+          "maxLength": 100,
+          "minLength": 2,
+          "title": "Heading",
+          "type": "string"
+        },
+        "narration": {
+          "maxLength": 600,
+          "minLength": 15,
+          "pattern": "^[^<>\\[\\]`]+$",
+          "title": "Narration",
+          "type": "string"
+        },
+        "visual": {
+          "$ref": "#/$defs/VisualConfiguration"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "heading",
+        "narration",
+        "visual"
+      ],
+      "title": "Scene",
+      "type": "object"
+    },
+    "TimelineItem": {
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "maxLength": 30,
+          "title": "Date",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 110,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "date",
+        "text"
+      ],
+      "title": "TimelineItem",
+      "type": "object"
+    },
+    "VisualConfiguration": {
+      "additionalProperties": false,
+      "properties": {
+        "damping": {
+          "default": 0,
+          "maximum": 0.3,
+          "minimum": 0,
+          "title": "Damping",
+          "type": "number"
+        },
+        "trace": {
+          "items": {
+            "$ref": "#/$defs/CodeTraceStep"
+          },
+          "maxItems": 8,
+          "title": "Trace",
+          "type": "array"
+        },
+        "layout": {
+          "default": "linear",
+          "enum": [
+            "linear",
+            "cycle",
+            "branch",
+            "hub"
+          ],
+          "title": "Layout",
+          "type": "string"
+        },
+        "motion": {
+          "default": "none",
+          "enum": [
+            "none",
+            "orbit",
+            "collision",
+            "diffusion",
+            "pendulum",
+            "wave",
+            "transfer"
+          ],
+          "title": "Motion",
+          "type": "string"
+        },
+        "shape": {
+          "default": "sphere",
+          "enum": [
+            "sphere",
+            "drop",
+            "leaf",
+            "block"
+          ],
+          "title": "Shape",
+          "type": "string"
+        },
+        "nodes": {
+          "items": {
+            "$ref": "#/$defs/DiagramNode"
+          },
+          "maxItems": 6,
+          "title": "Nodes",
+          "type": "array"
+        },
+        "edges": {
+          "items": {
+            "$ref": "#/$defs/DiagramEdge"
+          },
+          "maxItems": 8,
+          "title": "Edges",
+          "type": "array"
+        },
+        "code": {
+          "default": "",
+          "maxLength": 900,
+          "title": "Code",
+          "type": "string"
+        },
+        "highlightLines": {
+          "items": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "maxItems": 12,
+          "title": "Highlightlines",
+          "type": "array"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/DataPoint"
+          },
+          "maxItems": 7,
+          "title": "Points",
+          "type": "array"
+        },
+        "xLabel": {
+          "default": "",
+          "maxLength": 45,
+          "title": "Xlabel",
+          "type": "string"
+        },
+        "yLabel": {
+          "default": "",
+          "maxLength": 45,
+          "title": "Ylabel",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/TimelineItem"
+          },
+          "maxItems": 5,
+          "title": "Items",
+          "type": "array"
+        },
+        "leftTitle": {
+          "default": "",
+          "maxLength": 45,
+          "title": "Lefttitle",
+          "type": "string"
+        },
+        "rightTitle": {
+          "default": "",
+          "maxLength": 45,
+          "title": "Righttitle",
+          "type": "string"
+        },
+        "rows": {
+          "items": {
+            "$ref": "#/$defs/ComparisonRow"
+          },
+          "maxItems": 4,
+          "title": "Rows",
+          "type": "array"
+        },
+        "keywords": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4,
+          "title": "Keywords",
+          "type": "array"
+        },
+        "animation": {
+          "default": "progressive_reveal",
+          "enum": [
+            "progressive_reveal",
+            "trace_flow",
+            "highlight_sequence"
+          ],
+          "title": "Animation",
+          "type": "string"
+        }
+      },
+      "title": "VisualConfiguration",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "maxLength": 120,
+      "minLength": 3,
+      "title": "Title",
+      "type": "string"
+    },
+    "level": {
+      "enum": [
+        "beginner",
+        "intermediate"
+      ],
+      "title": "Level",
+      "type": "string"
+    },
+    "language": {
+      "title": "Language",
+      "type": "string"
+    },
+    "objectives": {
+      "items": {
+        "$ref": "#/$defs/LearningObjective"
+      },
+      "maxItems": 4,
+      "minItems": 1,
+      "title": "Objectives",
+      "type": "array"
+    },
+    "scenes": {
+      "items": {
+        "$ref": "#/$defs/Scene"
+      },
+      "maxItems": 6,
+      "minItems": 3,
+      "title": "Scenes",
+      "type": "array"
+    },
+    "quiz": {
+      "items": {
+        "$ref": "#/$defs/QuizQuestion"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Quiz",
+      "type": "array"
+    },
+    "followUps": {
+      "items": {
+        "maxLength": 240,
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Followups",
+      "type": "array"
+    }
+  },
+  "required": [
+    "title",
+    "level",
+    "language",
+    "objectives",
+    "scenes",
+    "quiz",
+    "followUps"
+  ],
+  "title": "LessonPlan",
+  "type": "object"
+}

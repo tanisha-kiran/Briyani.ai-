@@ -1,0 +1,249 @@
+{
+  "intent": "educational",
+  "message": "Built-in reviewed Python-loop sample for offline demonstrations.",
+  "lesson": {
+    "title": "பைதான் சுழற்சி: ஓர் எடுத்துக்காட்டு",
+    "level": "beginner",
+    "language": "ta",
+    "objectives": [
+      {
+        "text": "ஒரு செயல், மூன்று மதிப்புகள்"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "intro",
+        "type": "title_card",
+        "heading": "ஒரு செயல், மூன்று மதிப்புகள்",
+        "narration": "ஒரு வரிசையில் உள்ள ஒவ்வொரு மதிப்புக்கும் ஒரே செயலைச் செய்ய சுழற்சி உதவுகிறது. ஒரே கட்டளையை மூன்று முறை எழுத வேண்டியதில்லை. சுழற்சிக்குள் ஒருமுறை எழுதினால் போதும். இப்போது ஒரு சிறிய நிரலைப் படிப்படியாகப் பார்ப்போம்.",
+        "visual": {
+          "trace": [],
+          "layout": "linear",
+          "motion": "none",
+          "shape": "sphere",
+          "nodes": [],
+          "edges": [],
+          "code": "",
+          "highlightLines": [],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [
+            "for",
+            "range(3)",
+            "0 → 1 → 2"
+          ],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 18.048,
+        "start": 0,
+        "duration": 18.4,
+        "captions": [
+          {
+            "text": "ஒரு வரிசையில் உள்ள ஒவ்வொரு மதிப்புக்கும் ஒரே செயலைச் செய்ய சுழற்சி உதவுகிறது. ஒரே",
+            "start": 0,
+            "end": 7.635692307692308
+          },
+          {
+            "text": "கட்டளையை மூன்று முறை எழுத வேண்டியதில்லை. சுழற்சிக்குள் ஒருமுறை எழுதினால் போதும். இப்போது ஒரு",
+            "start": 7.635692307692308,
+            "end": 15.271384615384616
+          },
+          {
+            "text": "சிறிய நிரலைப் படிப்படியாகப் பார்ப்போம்.",
+            "start": 15.271384615384616,
+            "end": 18.048000000000002
+          }
+        ]
+      },
+      {
+        "id": "code",
+        "type": "code_walkthrough",
+        "heading": "இரண்டு வரி நிரல்",
+        "narration": "இந்த நிரலில் ரேஞ்ச் மூன்று என்பது பூஜ்ஜியம், ஒன்று, இரண்டு ஆகிய மதிப்புகளைத் தருகிறது. ஒவ்வொரு முறையும் ஐ என்ற மாறிக்கு அடுத்த மதிப்பு கிடைக்கிறது. உள்ளே உள்ள பிரிண்ட் கட்டளை அந்த மதிப்பை வெளியிடுகிறது. வரியின் தொடக்க இடைவெளி முக்கியமானது.",
+        "visual": {
+          "trace": [
+            {
+              "label": "Iteration 1",
+              "value": "i = 0",
+              "output": "0",
+              "line": 2
+            },
+            {
+              "label": "Iteration 2",
+              "value": "i = 1",
+              "output": "0\n1",
+              "line": 2
+            },
+            {
+              "label": "Iteration 3",
+              "value": "i = 2",
+              "output": "0\n1\n2",
+              "line": 2
+            }
+          ],
+          "layout": "linear",
+          "motion": "none",
+          "shape": "sphere",
+          "nodes": [],
+          "edges": [],
+          "code": "for i in range(3):\n    print(i)",
+          "highlightLines": [
+            1,
+            2
+          ],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 21.472,
+        "start": 18.4,
+        "duration": 21.85,
+        "captions": [
+          {
+            "text": "இந்த நிரலில் ரேஞ்ச் மூன்று என்பது பூஜ்ஜியம், ஒன்று, இரண்டு ஆகிய மதிப்புகளைத் தருகிறது.",
+            "start": 0,
+            "end": 7.873066666666667
+          },
+          {
+            "text": "ஒவ்வொரு முறையும் ஐ என்ற மாறிக்கு அடுத்த மதிப்பு கிடைக்கிறது. உள்ளே உள்ள பிரிண்ட்",
+            "start": 7.873066666666667,
+            "end": 15.746133333333335
+          },
+          {
+            "text": "கட்டளை அந்த மதிப்பை வெளியிடுகிறது. வரியின் தொடக்க இடைவெளி முக்கியமானது.",
+            "start": 15.746133333333335,
+            "end": 21.472
+          }
+        ]
+      },
+      {
+        "id": "flow",
+        "type": "flow_diagram",
+        "heading": "வெளியீட்டைப் பார்ப்போம்",
+        "narration": "முதலில் பூஜ்ஜியம், பிறகு ஒன்று, அதன் பிறகு இரண்டு வெளியாகும். ஒவ்வொரு மதிப்பும் தனித்தனி வரியில் இருக்கும். மூன்று இதில் சேராது. ரேஞ்ச் அதன் மேல் வரம்புக்கு முன்பே நிற்கும். இரண்டு முடிந்ததும் அடுத்த மதிப்பு இல்லை. எனவே சுழற்சி முடிகிறது.",
+        "visual": {
+          "trace": [],
+          "layout": "linear",
+          "motion": "none",
+          "shape": "sphere",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "i = 0 → print(0)"
+            },
+            {
+              "id": "n2",
+              "label": "i = 1 → print(1)"
+            },
+            {
+              "id": "n3",
+              "label": "i = 2 → print(2)"
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n2",
+              "label": "அடுத்த மதிப்பு"
+            },
+            {
+              "source": "n2",
+              "target": "n3",
+              "label": "அடுத்த மதிப்பு"
+            }
+          ],
+          "code": "",
+          "highlightLines": [],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 21.976,
+        "start": 40.25,
+        "duration": 22.35,
+        "captions": [
+          {
+            "text": "முதலில் பூஜ்ஜியம், பிறகு ஒன்று, அதன் பிறகு இரண்டு வெளியாகும். ஒவ்வொரு மதிப்பும் தனித்தனி",
+            "start": 0,
+            "end": 8.057866666666666
+          },
+          {
+            "text": "வரியில் இருக்கும். மூன்று இதில் சேராது. ரேஞ்ச் அதன் மேல் வரம்புக்கு முன்பே நிற்கும்.",
+            "start": 8.057866666666666,
+            "end": 16.11573333333333
+          },
+          {
+            "text": "இரண்டு முடிந்ததும் அடுத்த மதிப்பு இல்லை. எனவே சுழற்சி முடிகிறது.",
+            "start": 16.11573333333333,
+            "end": 21.976
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "lessonId": "fallback-ta",
+        "sceneId": "code",
+        "language": "ta",
+        "question": "முதலில் எந்த மதிப்பு வெளியாகும்?",
+        "options": [
+          {
+            "id": "option_0",
+            "text": "பூஜ்ஜியம்"
+          },
+          {
+            "id": "option_1",
+            "text": "ஒன்று"
+          },
+          {
+            "id": "option_2",
+            "text": "மூன்று"
+          }
+        ],
+        "correctOptionId": "option_0",
+        "explanation": "ரேஞ்ச் பூஜ்ஜியத்தில் தொடங்கி மூன்றுக்கு முன்பே நிற்கிறது.",
+        "misconceptionTag": null
+      }
+    ],
+    "followUps": [
+      "வைல் சுழற்சி எப்படி வேலை செய்கிறது?"
+    ],
+    "duration": 62.621333,
+    "targetDuration": 60
+  },
+  "id": "fallback-ta",
+  "quality": {
+    "version": "teaching-v5",
+    "passed": true,
+    "wordCount": 86,
+    "checks": [
+      "length budget",
+      "distinct scenes",
+      "specific headings",
+      "appropriate visuals",
+      "labeled relationships"
+    ]
+  },
+  "videoUrl": "/api/lessons/fallback-ta/video",
+  "captionsUrl": "/api/lessons/fallback-ta/captions",
+  "timingNote": "Scene lengths follow measured audio. Caption phrases use proportional timing.",
+  "model": "qwen3.5:4b"
+}

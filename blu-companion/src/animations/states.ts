@@ -1,0 +1,2 @@
+import type { BluEmotion } from '../contracts/shared';
+export const states:Record<BluEmotion,{duration:number;label:string}>={idle:{duration:0,label:'Ready to learn'},greeting:{duration:2800,label:'Welcoming you'},talking:{duration:0,label:'Speaking'},happy:{duration:1700,label:'Well done'},sad:{duration:2200,label:'Let’s try again'},thinking:{duration:0,label:'Thinking'},celebrating:{duration:1900,label:'Next lesson unlocked'}};

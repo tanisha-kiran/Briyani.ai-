@@ -1,0 +1,382 @@
+{
+  "intent": "educational",
+  "message": "",
+  "lesson": {
+    "title": "Why Do Apples Turn Brown?",
+    "level": "beginner",
+    "language": "en",
+    "objectives": [
+      {
+        "text": "Understand why apples turn brown and how to prevent it."
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scene1",
+        "type": "title_card",
+        "heading": "Why Do Apples Turn Brown?",
+        "narration": "Apples turn brown because of a process called oxidation. This happens when the skin of the apple is exposed to oxygen in the air. Let's explore this process in more detail. Watch this animation to see how it works. Watch animation",
+        "visual": {
+          "nodes": [
+            {
+              "id": "animation",
+              "label": "Animation"
+            }
+          ],
+          "edges": [
+            {
+              "source": "animation",
+              "target": "animation",
+              "label": "Watch"
+            }
+          ],
+          "code": "highlightLines: [1]",
+          "highlightLines": [
+            1
+          ],
+          "points": [
+            {
+              "label": "Oxygen",
+              "value": 1.0
+            }
+          ],
+          "xLabel": "Time",
+          "yLabel": "Oxygen Concentration",
+          "items": [
+            {
+              "date": "2023-10-01",
+              "text": "Oxidation starts"
+            },
+            {
+              "date": "2023-10-02",
+              "text": "Apple starts turning brown"
+            }
+          ],
+          "leftTitle": "Oxygen Levels",
+          "rightTitle": "Apple Skin",
+          "rows": [
+            {
+              "label": "Day 1",
+              "left": "0%",
+              "right": "0%"
+            },
+            {
+              "label": "Day 2",
+              "left": "10%",
+              "right": "10%"
+            },
+            {
+              "label": "Day 3",
+              "left": "20%",
+              "right": "20%"
+            }
+          ],
+          "keywords": [
+            "Oxidation",
+            "Apple",
+            "Brown"
+          ],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 18.29687074829932,
+        "start": 0,
+        "duration": 18.65,
+        "captions": [
+          {
+            "text": "Apples turn brown because of a process called oxidation. This happens",
+            "start": 0,
+            "end": 4.908916542226647
+          },
+          {
+            "text": "when the skin of the apple is exposed to oxygen in",
+            "start": 4.908916542226647,
+            "end": 9.817833084453294
+          },
+          {
+            "text": "the air. Let's explore this process in more detail. Watch this",
+            "start": 9.817833084453294,
+            "end": 14.726749626679942
+          },
+          {
+            "text": "animation to see how it works. Watch animation",
+            "start": 14.726749626679942,
+            "end": 18.29687074829932
+          }
+        ]
+      },
+      {
+        "id": "scene2",
+        "type": "labeled_diagram",
+        "heading": "Oxidation Process",
+        "narration": "Oxidation is a chemical reaction. It happens when an apple's skin comes into contact with oxygen. Let's see how this works with a labeled diagram. Watch this animation to see the process. Watch animation",
+        "visual": {
+          "nodes": [
+            {
+              "id": "apple",
+              "label": "Apple"
+            },
+            {
+              "id": "oxygen",
+              "label": "Oxygen"
+            },
+            {
+              "id": "oxidation",
+              "label": "Oxidation"
+            }
+          ],
+          "edges": [
+            {
+              "source": "apple",
+              "target": "oxidation",
+              "label": "Contact with"
+            },
+            {
+              "source": "oxidation",
+              "target": "oxygen",
+              "label": "Oxygen"
+            }
+          ],
+          "code": "highlightLines: [1]",
+          "highlightLines": [
+            1
+          ],
+          "points": [
+            {
+              "label": "Apple",
+              "value": 1.0
+            },
+            {
+              "label": "Oxygen",
+              "value": 2.0
+            },
+            {
+              "label": "Oxidation",
+              "value": 3.0
+            }
+          ],
+          "xLabel": "Process",
+          "yLabel": "Components",
+          "items": [
+            {
+              "date": "2023-10-01",
+              "text": "Apple starts turning brown"
+            },
+            {
+              "date": "2023-10-02",
+              "text": "Oxidation starts"
+            },
+            {
+              "date": "2023-10-03",
+              "text": "Oxidation completes"
+            }
+          ],
+          "leftTitle": "Components",
+          "rightTitle": "Process",
+          "rows": [
+            {
+              "label": "Day 1",
+              "left": "Apple",
+              "right": "Oxidation"
+            },
+            {
+              "label": "Day 2",
+              "left": "Oxygen",
+              "right": "Oxidation"
+            },
+            {
+              "label": "Day 3",
+              "left": "Brown",
+              "right": "Oxidation"
+            }
+          ],
+          "keywords": [
+            "Oxidation",
+            "Apple",
+            "Brown"
+          ],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 16.646938775510204,
+        "start": 18.65,
+        "duration": 17.0,
+        "captions": [
+          {
+            "text": "Oxidation is a chemical reaction. It happens when an apple's skin",
+            "start": 0,
+            "end": 5.38577430972389
+          },
+          {
+            "text": "comes into contact with oxygen. Let's see how this works with",
+            "start": 5.38577430972389,
+            "end": 10.77154861944778
+          },
+          {
+            "text": "a labeled diagram. Watch this animation to see the process. Watch",
+            "start": 10.77154861944778,
+            "end": 16.15732292917167
+          },
+          {
+            "text": "animation",
+            "start": 16.15732292917167,
+            "end": 16.646938775510204
+          }
+        ]
+      },
+      {
+        "id": "scene3",
+        "type": "comparison",
+        "heading": "Preventing Oxidation",
+        "narration": "To prevent apples from turning brown, we can use a few simple methods. One is to keep apples in a plastic bag. This traps the moisture inside and slows down the oxidation process. Another is to coat apples with a solution of lemon",
+        "visual": {
+          "nodes": [
+            {
+              "id": "apple",
+              "label": "Apple"
+            },
+            {
+              "id": "plastic_bag",
+              "label": "Plastic Bag"
+            },
+            {
+              "id": "lemon_solution",
+              "label": "Lemon Solution"
+            }
+          ],
+          "edges": [
+            {
+              "source": "apple",
+              "target": "plastic_bag",
+              "label": "Plastic Bag"
+            },
+            {
+              "source": "apple",
+              "target": "lemon_solution",
+              "label": "Lemon Solution"
+            }
+          ],
+          "code": "highlightLines: [1]",
+          "highlightLines": [
+            1
+          ],
+          "points": [
+            {
+              "label": "Apple",
+              "value": 1.0
+            },
+            {
+              "label": "Plastic Bag",
+              "value": 2.0
+            },
+            {
+              "label": "Lemon Solution",
+              "value": 3.0
+            }
+          ],
+          "xLabel": "Methods",
+          "yLabel": "Prevention",
+          "items": [
+            {
+              "date": "2023-10-01",
+              "text": "Apple starts turning brown"
+            },
+            {
+              "date": "2023-10-02",
+              "text": "Plastic Bag prevents oxidation"
+            },
+            {
+              "date": "2023-10-03",
+              "text": "Lemon Solution prevents oxidation"
+            }
+          ],
+          "leftTitle": "Methods",
+          "rightTitle": "Prevention",
+          "rows": [
+            {
+              "label": "Day 1",
+              "left": "Apple",
+              "right": "Plastic Bag"
+            },
+            {
+              "label": "Day 2",
+              "left": "Apple",
+              "right": "Lemon Solution"
+            },
+            {
+              "label": "Day 3",
+              "left": "Brown",
+              "right": "No Brown"
+            }
+          ],
+          "keywords": [
+            "Oxidation",
+            "Apple",
+            "Brown"
+          ],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 17.601768707482993,
+        "start": 35.65,
+        "duration": 18.0,
+        "captions": [
+          {
+            "text": "To prevent apples from turning brown, we can use a few",
+            "start": 0,
+            "end": 4.502778041449138
+          },
+          {
+            "text": "simple methods. One is to keep apples in a plastic bag.",
+            "start": 4.502778041449138,
+            "end": 9.005556082898275
+          },
+          {
+            "text": "This traps the moisture inside and slows down the oxidation process.",
+            "start": 9.005556082898275,
+            "end": 13.508334124347414
+          },
+          {
+            "text": "Another is to coat apples with a solution of lemon",
+            "start": 13.508334124347414,
+            "end": 17.601768707482993
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "quiz1",
+        "lessonId": "67ec7925a6044992b42d7c5a2e9fcefb",
+        "sceneId": "scene1",
+        "language": "en",
+        "question": "What causes apples to turn brown?",
+        "options": [
+          {
+            "id": "option1",
+            "text": "Contact with oxygen"
+          },
+          {
+            "id": "option2",
+            "text": "Contact with water"
+          },
+          {
+            "id": "option3",
+            "text": "Contact with lemon"
+          }
+        ],
+        "correctOptionId": "option1",
+        "explanation": "Apples turn brown when they come into contact with oxygen. This is called oxidation. The more oxygen an apple is exposed to, the faster it turns brown.",
+        "misconceptionTag": null
+      }
+    ],
+    "followUps": [
+      "Try this at home: Keep apples in a plastic bag to prevent them from turning brown. See how long it takes for the apples to turn brown in the bag compared to apples left out.",
+      "Research other fruits and vegetables that can be affected by oxidation. How can we prevent them from turning brown?"
+    ],
+    "duration": 53.696463,
+    "targetDuration": 30
+  },
+  "id": "67ec7925a6044992b42d7c5a2e9fcefb",
+  "videoUrl": "/api/lessons/67ec7925a6044992b42d7c5a2e9fcefb/video",
+  "captionsUrl": "/api/lessons/67ec7925a6044992b42d7c5a2e9fcefb/captions",
+  "timingNote": "Scene lengths follow measured audio. Caption phrases use proportional timing.",
+  "model": "biryani-planner"
+}

@@ -1,0 +1,11 @@
+import type { CompanionAdapter, LanguageCode, LearningEvent, QuizQuestion } from '../contracts/shared';
+import { validateEvent, validateQuestion } from './quizAdapter';
+/** Protocol adapter only: the video engine implements these routes. No model runs here. */
+export class HttpCompanionAdapter implements CompanionAdapter {
+ constructor(private base='/api'){}
+ private async json(path:string,init:RequestInit={}){const response=await fetch(`${this.base}${path}`,{...init,headers:{'Content-Type':'application/json',...init.headers}});if(!response.ok)throw new Error(`Local engine returned ${response.status}.`);return response.json() as Promise<unknown>;}
+ async fetchQuiz(lessonId:string,language:LanguageCode,signal?:AbortSignal):Promise<QuizQuestion[]>{const data=await this.json(`/lessons/${encodeURIComponent(lessonId)}/quiz?language=${language}`,{signal});if(!Array.isArray(data)||!data.length)throw new Error('No quiz questions returned.');const result=data.map(validateQuestion);if(result.some(q=>q.lessonId!==lessonId)||new Set(result.map(q=>q.id)).size!==result.length)throw new Error('Quiz lesson mismatch or duplicate question.');return result;}
+ async submitAnswer(questionId:string,optionId:string,language:LanguageCode,signal?:AbortSignal){const data=await this.json(`/quiz/${encodeURIComponent(questionId)}/answers`,{method:'POST',signal,body:JSON.stringify({optionId,language})});if(!data||typeof data!=='object'||!('correct' in data)||typeof data.correct!=='boolean'||!('explanation' in data)||typeof data.explanation!=='string')throw new Error('Invalid answer response.');return {correct:data.correct,explanation:data.explanation};}
+ async replayScene(lessonId:string,sceneId:string){await this.json(`/lessons/${encodeURIComponent(lessonId)}/replay`,{method:'POST',body:JSON.stringify({sceneId})});}
+ subscribe(listener:(event:LearningEvent)=>void){const stream=new EventSource(`${this.base}/events`);stream.onmessage=e=>{try{listener(validateEvent(JSON.parse(e.data)))}catch{listener({type:'system:error',message:'Invalid progress event received.'})}};stream.onerror=()=>listener({type:'system:error',message:'Local event connection interrupted; reconnecting.'});return()=>stream.close();}
+}

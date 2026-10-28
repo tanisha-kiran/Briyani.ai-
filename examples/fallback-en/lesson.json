@@ -1,0 +1,259 @@
+{
+  "intent": "educational",
+  "message": "Built-in reviewed Python-loop sample for offline demonstrations.",
+  "lesson": {
+    "title": "Python loops: a worked example",
+    "level": "beginner",
+    "language": "en",
+    "objectives": [
+      {
+        "text": "One instruction, three values"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "intro",
+        "type": "title_card",
+        "heading": "One instruction, three values",
+        "narration": "A for loop repeats an instruction for each value in a sequence. Instead of writing the same instruction three times, we write it once inside a loop. Let us follow a small example.",
+        "visual": {
+          "trace": [],
+          "layout": "linear",
+          "motion": "none",
+          "shape": "sphere",
+          "nodes": [],
+          "edges": [],
+          "code": "",
+          "highlightLines": [],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [
+            "for",
+            "range(3)",
+            "0 → 1 → 2"
+          ],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 11.206666666666667,
+        "start": 0,
+        "duration": 11.6,
+        "captions": [
+          {
+            "text": "A for loop repeats an instruction for each value in a",
+            "start": 0,
+            "end": 3.735555555555556
+          },
+          {
+            "text": "sequence. Instead of writing the same instruction three times, we write",
+            "start": 3.735555555555556,
+            "end": 7.471111111111112
+          },
+          {
+            "text": "it once inside a loop. Let us follow a small example.",
+            "start": 7.471111111111112,
+            "end": 11.206666666666667
+          }
+        ]
+      },
+      {
+        "id": "code",
+        "type": "code_walkthrough",
+        "heading": "Read the two lines",
+        "narration": "In this code, range of three supplies zero, one, and two. The variable i takes one value at a time. The indented print statement runs once for each value. Indentation places the statement inside the loop.",
+        "visual": {
+          "trace": [
+            {
+              "label": "Iteration 1",
+              "value": "i = 0",
+              "output": "0",
+              "line": 2
+            },
+            {
+              "label": "Iteration 2",
+              "value": "i = 1",
+              "output": "0\n1",
+              "line": 2
+            },
+            {
+              "label": "Iteration 3",
+              "value": "i = 2",
+              "output": "0\n1\n2",
+              "line": 2
+            }
+          ],
+          "layout": "linear",
+          "motion": "none",
+          "shape": "sphere",
+          "nodes": [],
+          "edges": [],
+          "code": "for i in range(3):\n    print(i)",
+          "highlightLines": [
+            1,
+            2
+          ],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 13.517333333333333,
+        "start": 11.6,
+        "duration": 13.9,
+        "captions": [
+          {
+            "text": "In this code, range of three supplies zero, one, and two.",
+            "start": 0,
+            "end": 4.130296296296296
+          },
+          {
+            "text": "The variable i takes one value at a time. The indented",
+            "start": 4.130296296296296,
+            "end": 8.260592592592593
+          },
+          {
+            "text": "print statement runs once for each value. Indentation places the statement",
+            "start": 8.260592592592593,
+            "end": 12.390888888888888
+          },
+          {
+            "text": "inside the loop.",
+            "start": 12.390888888888888,
+            "end": 13.517333333333333
+          }
+        ]
+      },
+      {
+        "id": "flow",
+        "type": "flow_diagram",
+        "heading": "Follow the output",
+        "narration": "The output is zero, then one, then two, each on its own line. Three is excluded because range stops before its upper limit. After two, there are no values left, so the loop ends.",
+        "visual": {
+          "trace": [],
+          "layout": "linear",
+          "motion": "none",
+          "shape": "sphere",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "i = 0 → print(0)"
+            },
+            {
+              "id": "n2",
+              "label": "i = 1 → print(1)"
+            },
+            {
+              "id": "n3",
+              "label": "i = 2 → print(2)"
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n2",
+              "label": "next value"
+            },
+            {
+              "source": "n2",
+              "target": "n3",
+              "label": "next value"
+            }
+          ],
+          "code": "",
+          "highlightLines": [],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 11.504,
+        "start": 25.5,
+        "duration": 11.9,
+        "captions": [
+          {
+            "text": "The output is zero, then one, then two, each on its",
+            "start": 0,
+            "end": 3.721882352941176
+          },
+          {
+            "text": "own line. Three is excluded because range stops before its upper",
+            "start": 3.721882352941176,
+            "end": 7.443764705882352
+          },
+          {
+            "text": "limit. After two, there are no values left, so the loop",
+            "start": 7.443764705882352,
+            "end": 11.165647058823529
+          },
+          {
+            "text": "ends.",
+            "start": 11.165647058823529,
+            "end": 11.504
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "lessonId": "fallback-en",
+        "sceneId": "code",
+        "language": "en",
+        "question": "Which value is printed first?",
+        "options": [
+          {
+            "id": "option_0",
+            "text": "Zero"
+          },
+          {
+            "id": "option_1",
+            "text": "One"
+          },
+          {
+            "id": "option_2",
+            "text": "Three"
+          }
+        ],
+        "correctOptionId": "option_0",
+        "explanation": "Range starts at zero and stops before three.",
+        "misconceptionTag": null
+      }
+    ],
+    "followUps": [
+      "How does a while loop work?"
+    ],
+    "duration": 37.421333,
+    "targetDuration": 60
+  },
+  "id": "fallback-en",
+  "quality": {
+    "version": "teaching-v5",
+    "passed": true,
+    "wordCount": 103,
+    "checks": [
+      "length budget",
+      "distinct scenes",
+      "specific headings",
+      "appropriate visuals",
+      "labeled relationships"
+    ]
+  },
+  "videoUrl": "/api/lessons/fallback-en/video",
+  "captionsUrl": "/api/lessons/fallback-en/captions",
+  "timingNote": "Scene lengths follow measured audio. Caption phrases use proportional timing.",
+  "model": "qwen3.5:4b"
+}

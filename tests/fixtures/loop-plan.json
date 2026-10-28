@@ -1,0 +1,51 @@
+{
+  "title": "Range Stops Before Limit",
+  "objective": "Understand that range(3) generates numbers 0, 1, 2 excluding 3",
+  "scenes": [
+    {
+      "heading": "Range Stops Before Limit",
+      "type": "title_card",
+      "narration": "The range function creates a sequence starting from zero up to a specific limit number. Crucially, the upper number provided is never included in the final sequence. So range(3) yields exactly 0, 1, and 2, stopping just before it reaches 3.",
+      "labels": [
+        "Range Stops Before Limit",
+        "0, 1, 2",
+        "exclusion"
+      ]
+    },
+    {
+      "heading": "Concrete Example Walkthrough",
+      "type": "code_walkthrough",
+      "narration": "The code starts by defining a loop that visits every item in the 0, 1, 2 sequence. The variable i takes each number in turn as the program executes the body line by line. Finally, print(i) outputs 0, then 1, then 2 on separate lines, confirming the upper limit is excluded.",
+      "labels": [
+        "Concrete Example Walkthrough",
+        "i takes each number",
+        "upper limit excluded"
+      ],
+      "code": "for i in range(3):\n    print(i)"
+    },
+    {
+      "heading": "Common Mistake Alert",
+      "type": "flow_diagram",
+      "narration": "Students often mistakenly believe range(3) starts at 1 or includes 3 in the count. The correct sequence supplies a value to print that stops strictly before 3. The upper limit is excluded, so the loop has three iterations.",
+      "labels": [
+        "Common Mistake Alert",
+        "starts at 1",
+        "diffusion of error"
+      ],
+      "layout": "hub",
+      "links": [
+        {
+          "source": 0,
+          "target": 1,
+          "label": "correctly excludes 3"
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "label": "prevents counting 3"
+        }
+      ]
+    }
+  ],
+  "followUp": "Practice writing loops with different limit values to reinforce the exclusion rule."
+}

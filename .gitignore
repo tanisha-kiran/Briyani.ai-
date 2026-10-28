@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.local
+.venv/
+__pycache__/
+.pytest_cache/
+output/
+models/
+
+*.log
+runtime/
+work/
+voices/

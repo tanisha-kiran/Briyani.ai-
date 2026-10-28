@@ -1,0 +1,5 @@
+# BLU sprite atlas prompt
+
+Tool: built-in image_gen. Transparent background requested. Input: user-supplied BLU animation/emotion reference sheet. Asset: public/blu/poses.png. Artwork is an adaptation for review, not a pixel-exact extraction.
+
+Use case: identity-preserve. Create a clean animation asset sheet of the exact BLU mascot from this reference. Preserve the round bright cyan glossy body, black thin stick arms/legs, black shiny eyes, pink cheeks, terracotta oval biryani platter hat with rice and chicken drumstick, same proportions and illustrated 2.5D style. No book. Transparent background, no text, no panel backgrounds, no shadows outside character. Six evenly spaced equal cells in exactly 3 columns x 2 rows. Every character fully within its cell with generous padding, same scale. Row1: idle friendly smile front view; happy with both arms up and eyes curved smiling; sad gentle frown looking encouraging. Row2: seated with legs forward holding small biryani bowl and spoon at mouth eating; waving one hand greeting; thoughtful hand at chin. This is a UI sprite atlas, keep hat and body identity identical across cells. Match reference very closely.

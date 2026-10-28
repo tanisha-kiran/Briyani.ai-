@@ -1,0 +1,264 @@
+{
+  "intent": "educational",
+  "message": "Built-in reviewed Python-loop sample for offline demonstrations.",
+  "lesson": {
+    "title": "पायथन लूप: एक उदाहरण",
+    "level": "beginner",
+    "language": "hi",
+    "objectives": [
+      {
+        "text": "एक निर्देश, तीन मान"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "intro",
+        "type": "title_card",
+        "heading": "एक निर्देश, तीन मान",
+        "narration": "फॉर लूप किसी क्रम के हर मान के लिए एक निर्देश दोहराता है। एक ही निर्देश को तीन बार लिखने के बजाय, हम उसे लूप के अंदर एक बार लिखते हैं। एक छोटा उदाहरण समझते हैं।",
+        "visual": {
+          "trace": [],
+          "layout": "linear",
+          "motion": "none",
+          "shape": "sphere",
+          "nodes": [],
+          "edges": [],
+          "code": "",
+          "highlightLines": [],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [
+            "for",
+            "range(3)",
+            "0 → 1 → 2"
+          ],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 12.352,
+        "start": 0,
+        "duration": 12.75,
+        "captions": [
+          {
+            "text": "फॉर लूप किसी क्रम के हर मान के लिए एक निर्देश",
+            "start": 0,
+            "end": 3.774222222222223
+          },
+          {
+            "text": "दोहराता है। एक ही निर्देश को तीन बार लिखने के बजाय,",
+            "start": 3.774222222222223,
+            "end": 7.548444444444446
+          },
+          {
+            "text": "हम उसे लूप के अंदर एक बार लिखते हैं। एक छोटा",
+            "start": 7.548444444444446,
+            "end": 11.322666666666668
+          },
+          {
+            "text": "उदाहरण समझते हैं।",
+            "start": 11.322666666666668,
+            "end": 12.352000000000002
+          }
+        ]
+      },
+      {
+        "id": "code",
+        "type": "code_walkthrough",
+        "heading": "कोड की दो पंक्तियाँ",
+        "narration": "इस कोड में रेंज तीन से शून्य, एक और दो मिलते हैं। हर बार आई में अगला मान आता है। अंदर लिखा प्रिंट निर्देश उस मान को दिखाता है। खाली जगह बताती है कि निर्देश लूप के अंदर है।",
+        "visual": {
+          "trace": [
+            {
+              "label": "Iteration 1",
+              "value": "i = 0",
+              "output": "0",
+              "line": 2
+            },
+            {
+              "label": "Iteration 2",
+              "value": "i = 1",
+              "output": "0\n1",
+              "line": 2
+            },
+            {
+              "label": "Iteration 3",
+              "value": "i = 2",
+              "output": "0\n1\n2",
+              "line": 2
+            }
+          ],
+          "layout": "linear",
+          "motion": "none",
+          "shape": "sphere",
+          "nodes": [],
+          "edges": [],
+          "code": "for i in range(3):\n    print(i)",
+          "highlightLines": [
+            1,
+            2
+          ],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 12.778666666666666,
+        "start": 12.75,
+        "duration": 13.15,
+        "captions": [
+          {
+            "text": "इस कोड में रेंज तीन से शून्य, एक और दो मिलते",
+            "start": 0,
+            "end": 3.6042393162393163
+          },
+          {
+            "text": "हैं। हर बार आई में अगला मान आता है। अंदर लिखा",
+            "start": 3.6042393162393163,
+            "end": 7.2084786324786325
+          },
+          {
+            "text": "प्रिंट निर्देश उस मान को दिखाता है। खाली जगह बताती है",
+            "start": 7.2084786324786325,
+            "end": 10.81271794871795
+          },
+          {
+            "text": "कि निर्देश लूप के अंदर है।",
+            "start": 10.81271794871795,
+            "end": 12.778666666666668
+          }
+        ]
+      },
+      {
+        "id": "flow",
+        "type": "flow_diagram",
+        "heading": "आउटपुट देखें",
+        "narration": "आउटपुट में पहले शून्य, फिर एक, फिर दो आते हैं। हर मान अलग पंक्ति पर दिखता है। तीन शामिल नहीं है, क्योंकि रेंज ऊपरी सीमा से पहले रुकती है। दो के बाद कोई मान नहीं बचता और लूप समाप्त होता है।",
+        "visual": {
+          "trace": [],
+          "layout": "linear",
+          "motion": "none",
+          "shape": "sphere",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "i = 0 → print(0)"
+            },
+            {
+              "id": "n2",
+              "label": "i = 1 → print(1)"
+            },
+            {
+              "id": "n3",
+              "label": "i = 2 → print(2)"
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n2",
+              "label": "अगला मान"
+            },
+            {
+              "source": "n2",
+              "target": "n3",
+              "label": "अगला मान"
+            }
+          ],
+          "code": "",
+          "highlightLines": [],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 13.674666666666667,
+        "start": 25.9,
+        "duration": 14.05,
+        "captions": [
+          {
+            "text": "आउटपुट में पहले शून्य, फिर एक, फिर दो आते हैं। हर",
+            "start": 0,
+            "end": 3.6688130081300816
+          },
+          {
+            "text": "मान अलग पंक्ति पर दिखता है। तीन शामिल नहीं है, क्योंकि",
+            "start": 3.6688130081300816,
+            "end": 7.337626016260163
+          },
+          {
+            "text": "रेंज ऊपरी सीमा से पहले रुकती है। दो के बाद कोई",
+            "start": 7.337626016260163,
+            "end": 11.006439024390245
+          },
+          {
+            "text": "मान नहीं बचता और लूप समाप्त होता है।",
+            "start": 11.006439024390245,
+            "end": 13.674666666666667
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "lessonId": "fallback-hi",
+        "sceneId": "code",
+        "language": "hi",
+        "question": "सबसे पहले कौन सा मान दिखता है?",
+        "options": [
+          {
+            "id": "option_0",
+            "text": "शून्य"
+          },
+          {
+            "id": "option_1",
+            "text": "एक"
+          },
+          {
+            "id": "option_2",
+            "text": "तीन"
+          }
+        ],
+        "correctOptionId": "option_0",
+        "explanation": "रेंज शून्य से शुरू होती है और तीन से पहले रुकती है।",
+        "misconceptionTag": null
+      }
+    ],
+    "followUps": [
+      "वाइल लूप कैसे काम करता है?"
+    ],
+    "duration": 39.971333,
+    "targetDuration": 60
+  },
+  "id": "fallback-hi",
+  "quality": {
+    "version": "teaching-v5",
+    "passed": true,
+    "wordCount": 116,
+    "checks": [
+      "length budget",
+      "distinct scenes",
+      "specific headings",
+      "appropriate visuals",
+      "labeled relationships"
+    ]
+  },
+  "videoUrl": "/api/lessons/fallback-hi/video",
+  "captionsUrl": "/api/lessons/fallback-hi/captions",
+  "timingNote": "Scene lengths follow measured audio. Caption phrases use proportional timing.",
+  "model": "qwen3.5:4b"
+}

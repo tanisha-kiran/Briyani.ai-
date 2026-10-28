@@ -1,0 +1,11 @@
+accelerate==1.10.1
+av==14.2.0
+diffusers==0.33.1
+huggingface_hub==0.30.2
+imageio==2.37.0
+ltx-video @ git+https://github.com/Lightricks/LTX-Video.git@4b2d053057623ddd4d0a1d3e9cd28890e9ef487f
+numpy==2.5.4
+PyYAML==6.0.2
+safetensors==0.5.3
+sentencepiece==0.2.0
+transformers==4.51.3

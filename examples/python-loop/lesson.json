@@ -1,0 +1,227 @@
+{
+  "intent": "educational",
+  "message": "A Python for loop with range(3) is used to iterate over a sequence of numbers. Let's explore this concept with a simple example.",
+  "lesson": {
+    "title": "Python For Loop with range(3)",
+    "level": "beginner",
+    "language": "en",
+    "objectives": [
+      {
+        "text": "Understand how a for loop with range(3) works in Python and what it does."
+      }
+    ],
+    "scenes": [
+      {
+        "id": "scene1",
+        "type": "title_card",
+        "heading": "Introduction to for loops in Python",
+        "narration": "In Python, a for loop is used to iterate over a sequence of items. We'll use range(3) to see how it works.",
+        "visual": {
+          "nodes": [],
+          "edges": [],
+          "code": "",
+          "highlightLines": [],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [
+            "for loop",
+            "range function"
+          ],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 9.758321995464852,
+        "start": 0,
+        "duration": 10.15,
+        "captions": [
+          {
+            "text": "In Python, a for loop is used to iterate over a",
+            "start": 0,
+            "end": 4.879160997732426
+          },
+          {
+            "text": "sequence of items. We'll use range(3) to see how it works.",
+            "start": 4.879160997732426,
+            "end": 9.758321995464852
+          }
+        ]
+      },
+      {
+        "id": "scene2",
+        "type": "comparison",
+        "heading": "Understanding range(3)",
+        "narration": "range(3) generates numbers 0, 1, and 2. In a for loop, it will iterate over these numbers, allowing us to perform actions for each number.",
+        "visual": {
+          "nodes": [],
+          "edges": [],
+          "code": "",
+          "highlightLines": [],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "range(3)",
+          "rightTitle": "Numbers 0, 1, 2",
+          "rows": [
+            {
+              "label": "0",
+              "left": "0",
+              "right": "0"
+            },
+            {
+              "label": "1",
+              "left": "1",
+              "right": "1"
+            },
+            {
+              "label": "2",
+              "left": "2",
+              "right": "2"
+            }
+          ],
+          "keywords": [],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 12.38267573696145,
+        "start": 10.15,
+        "duration": 12.75,
+        "captions": [
+          {
+            "text": "range(3) generates numbers 0, 1, and 2. In a for loop,",
+            "start": 0,
+            "end": 5.4483773242630384
+          },
+          {
+            "text": "it will iterate over these numbers, allowing us to perform actions",
+            "start": 5.4483773242630384,
+            "end": 10.896754648526077
+          },
+          {
+            "text": "for each number.",
+            "start": 10.896754648526077,
+            "end": 12.38267573696145
+          }
+        ]
+      },
+      {
+        "id": "scene3",
+        "type": "code_walkthrough",
+        "heading": "Using range(3) in a for loop",
+        "narration": "Here's how we use range(3) in a for loop. The loop will execute three times, once for each number in range(3).",
+        "visual": {
+          "nodes": [],
+          "edges": [],
+          "code": "for i in range(3):\n  print(i)",
+          "highlightLines": [
+            1,
+            2
+          ],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 10.643310657596372,
+        "start": 22.9,
+        "duration": 11.0,
+        "captions": [
+          {
+            "text": "Here's how we use range(3) in a for loop. The loop",
+            "start": 0,
+            "end": 5.575067487312386
+          },
+          {
+            "text": "will execute three times, once for each number in range(3).",
+            "start": 5.575067487312386,
+            "end": 10.643310657596373
+          }
+        ]
+      },
+      {
+        "id": "scene4",
+        "type": "code_walkthrough",
+        "heading": "Example of a for loop with range(3)",
+        "narration": "Let's see a simple example. We'll print each number in range(3). This loop will run three times, printing 0, 1, and 2.",
+        "visual": {
+          "nodes": [],
+          "edges": [],
+          "code": "for i in range(3):\n  print(i)",
+          "highlightLines": [
+            1,
+            2
+          ],
+          "points": [],
+          "xLabel": "",
+          "yLabel": "",
+          "items": [],
+          "leftTitle": "",
+          "rightTitle": "",
+          "rows": [],
+          "keywords": [],
+          "animation": "progressive_reveal"
+        },
+        "audioDuration": 12.068027210884354,
+        "start": 33.9,
+        "duration": 12.45,
+        "captions": [
+          {
+            "text": "Let's see a simple example. We'll print each number in range(3).",
+            "start": 0,
+            "end": 6.034013605442177
+          },
+          {
+            "text": "This loop will run three times, printing 0, 1, and 2.",
+            "start": 6.034013605442177,
+            "end": 12.068027210884354
+          }
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "lessonId": "160f6e35552c4a61ad1a8c3f2f6ea18d",
+        "sceneId": "scene4",
+        "language": "en",
+        "question": "What numbers will be printed by the for loop in scene 4?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "0, 1, 2"
+          },
+          {
+            "id": "o2",
+            "text": "1, 2, 3"
+          },
+          {
+            "id": "o3",
+            "text": "0, 2, 4"
+          }
+        ],
+        "correctOptionId": "o1",
+        "explanation": "The for loop in scene 4 uses range(3), which generates numbers 0, 1, and 2. The loop will print each of these numbers.",
+        "misconceptionTag": null
+      }
+    ],
+    "followUps": [
+      "Try creating your own for loop with range(5) and see what numbers are printed.",
+      "Experiment with other range values like range(10) to see how the loop behaves."
+    ],
+    "duration": 46.396508,
+    "targetDuration": 30
+  },
+  "id": "160f6e35552c4a61ad1a8c3f2f6ea18d",
+  "videoUrl": "/api/lessons/160f6e35552c4a61ad1a8c3f2f6ea18d/video",
+  "captionsUrl": "/api/lessons/160f6e35552c4a61ad1a8c3f2f6ea18d/captions",
+  "timingNote": "Scene lengths follow measured audio. Caption phrases use proportional timing.",
+  "model": "biryani-planner"
+}

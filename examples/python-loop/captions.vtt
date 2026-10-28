@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.879
+In Python, a for loop is used to iterate over a
+
+00:00:04.879 --> 00:00:09.758
+sequence of items. We'll use range(3) to see how it works.
+
+00:00:10.150 --> 00:00:15.598
+range(3) generates numbers 0, 1, and 2. In a for loop,
+
+00:00:15.598 --> 00:00:21.047
+it will iterate over these numbers, allowing us to perform actions
+
+00:00:21.047 --> 00:00:22.533
+for each number.
+
+00:00:22.900 --> 00:00:28.475
+Here's how we use range(3) in a for loop. The loop
+
+00:00:28.475 --> 00:00:33.543
+will execute three times, once for each number in range(3).
+
+00:00:33.900 --> 00:00:39.934
+Let's see a simple example. We'll print each number in range(3).
+
+00:00:39.934 --> 00:00:45.968
+This loop will run three times, printing 0, 1, and 2.
